@@ -9,3 +9,6 @@ Requirements:
 
   For Shutdown / Reboot functions - Add entry to /etc/sudoers
   	www-data cnc-pi = (root) NOPASSWD: /sbin/shutdown
+
+Installation:
+  Simply put in your default web server directory, or a virtual host directory of your choice.
