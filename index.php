@@ -10,20 +10,23 @@
 	}
 ?>
 <html>
-  <head>
+<head>
+	<title>Pi-WebStats</title>	
 	<meta http-equiv="refresh" content="10">
 	<style>
 	h2 {margin:0px auto; line-height:1em;}
 	pre { display: inline; margin:0px;}
 	</style>
-  </head>
-  <body>
+</head>
+<body>
 	<?php if(isset($msg)) {
 		print('<div style="width:50%; margin:auto; background-color:red; text-align:center;">
 			<h1>'. $msg . '</h1>
 		</div>');
 	}
 	?>	
+	<h1>Pi-WebStats</h1>
+	
 	<h2>System Stats</h2>
 	<pre><?php 
 	print('<br>');
@@ -56,5 +59,7 @@
 		<input type="submit" value="Reboot"  style="color:red; font-size:1.5em;"/>
 	</form>
 
-  </body>
-    </html>
+	<br><br>
+	<a href="https://github.com/NexEng/Pi-WebStats">Pi-WebStats on GitHub</a> developed by <a href="http://nexeng.us/">Nexus Engineering LLC</a>
+
+</body></html>
