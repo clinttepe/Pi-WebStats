@@ -18,4 +18,4 @@ gpio -v
 # Configure sudoers to support shutdown functionality
 echo "www-data cnc-pi = (root) NOPASSWD: /sbin/shutdown" >>/etc/sudoers
 #
-# All done!
+echo "All done!"
