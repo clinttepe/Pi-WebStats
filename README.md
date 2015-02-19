@@ -11,4 +11,4 @@ Requirements:
   	www-data cnc-pi = (root) NOPASSWD: /sbin/shutdown
 
 Installation:
-  Simply put in your default web server directory, or a virtual host directory of your choice.
+  Simply put in your default web server directory, or a virtual host directory of your choice.... working on a one step installation script which should be ready very soon!
