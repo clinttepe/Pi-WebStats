@@ -48,6 +48,6 @@ echo "<VirtualHost *:80>
 echo "
 Configuring sudoers to support shutdown functionality... step 5/5
 "
-echo "www-data cnc-pi = (root) NOPASSWD: /sbin/shutdown" >>/etc/sudoers
+echo "www-data `hostname` = (root) NOPASSWD: /sbin/shutdown" >>/etc/sudoers
 #
 echo "All done! Navigate to http://`hostname -I | xargs`/Pi-WebStats-master/ in your browser."
