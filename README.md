@@ -1,6 +1,15 @@
 # Pi-WebStats
 Displays general system and GPIO information for the Raspberry Pi in a simple web interface.
 
+
+Installation:
+  
+  To download Pi-WebStats and completely install it will all dependencies, simply run <code>wget https://github.com/NexEng/Pi-WebStats/blob/master/install-and-download.sh | sudo bash install-and-download.sh
+</code>
+  
+  If you want to set up the webserver on your own, simply download Pi-WebStats and put it in your default web server directory, or a virtual host directory of your choice and follow the requirements below:
+
+
 Requirements:
 
   General - Webserver and PHP
@@ -9,6 +18,3 @@ Requirements:
 
   For Shutdown / Reboot functions - Add entry to /etc/sudoers
   	www-data cnc-pi = (root) NOPASSWD: /sbin/shutdown
-
-Installation:
-  Simply put in your default web server directory, or a virtual host directory of your choice.... working on a one step installation script which should be ready very soon!
