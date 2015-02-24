@@ -12,11 +12,42 @@
 <html>
 <head>
 	<title>Pi-WebStats</title>	
-	<meta http-equiv="refresh" content="10">
+
 	<style>
 	h2 {margin:0px auto; line-height:1em;}
 	pre { display: inline; margin:0px;}
 	</style>
+
+	<script language="javascript" type="text/javascript">
+	function loadSystem(){
+		var xmlhttp;
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function()
+		  {
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		    {
+		    document.getElementById("system").innerHTML=xmlhttp.responseText;
+		    }
+		  }
+		xmlhttp.open("GET","system.php",true);
+		xmlhttp.send();
+	}
+
+	function loadGPIO(){
+		var xmlhttp;
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function()
+		  {
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		    {
+		    document.getElementById("gpio").innerHTML=xmlhttp.responseText;
+		    }
+		  }
+		xmlhttp.open("GET","gpio.php",true);
+		xmlhttp.send();
+	}
+	</script>
+
 </head>
 <body>
 	<?php if(isset($msg)) {
@@ -28,26 +59,25 @@
 	<h1>Pi-WebStats</h1>
 	
 	<h2>System Stats</h2>
-	<pre><?php 
-	print('<br>');
-	print trim(`uptime`); 
-	print('<br><br>');
-        print( trim(`ps -e | wc -l`). ' processes running.');
-	print('<br><br>');
-	print `free -m | head -2`;
-	print('<br>');
-	print `df -h | head -2`;
-	print('<br>');
-	print trim(`/sbin/ifconfig eth0 | grep "bytes"`);
-	print('<br>');
-	//print `/usr/bin/apt-get -u upgrade --assume-no`;
-	?>
+	<pre>
+	<div id="system">
+	<script language="javascript" type="text/javascript">
+	loadSystem(); // This will run on page load
+	setInterval(function(){
+	    loadSystem() // this will run after every 5 seconds
+	}, 5000);
+	</script>
+	</div>
 
 	<h2>GPIO</h2>
-	<?php print trim(`gpio -v | grep "version"`);
-	print('<br>');
-	print `gpio readall`;
-	?></pre>
+	<div id="gpio">
+	<script language="javascript" type="text/javascript">
+	loadGPIO(); // This will run on page load
+	setInterval(function(){
+	    loadGPIO() // this will run after every 5 seconds
+	}, 5000);
+	</script>
+	</div></pre>
 	
 	<br>
 	<form action="index.php" method="post" style="display:inline;">
