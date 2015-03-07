@@ -4,6 +4,8 @@ Displays general system and GPIO information for the Raspberry Pi in a simple we
 
 Installation:
   
+  **WARNING: Always review code before running it on your system; particularly when it requests sudo/root priviliges!!**
+  
   To download Pi-WebStats and completely install it will all dependencies, simply run <code>wget https://github.com/NexEng/Pi-WebStats/blob/master/install-and-download.sh | sudo bash install-and-download.sh
 </code>
   
