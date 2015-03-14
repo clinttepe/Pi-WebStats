@@ -1,6 +1,7 @@
 # Pi-WebStats
 Displays general system and GPIO information for the Raspberry Pi in a simple web interface.
 
+Screenshot: http://imgur.com/HqEttvo
 
 Installation:
   
