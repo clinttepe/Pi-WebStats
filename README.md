@@ -7,9 +7,11 @@ Installation:
   
   **WARNING: Always review code before running it on your system; particularly when it requests sudo/root priviliges!!**
   
-  To download Pi-WebStats and completely install it will all dependencies, simply run 
+ **Simple Installation:** To download Pi-WebStats and completely install it will all dependencies, simply run 
+  
   <code>wget https://github.com/NexEng/Pi-WebStats/blob/master/install-and-download.sh | sudo bash install-and-download.sh</code>
   
+ 
   If you want to set up the webserver on your own, simply download Pi-WebStats and put it in your default web server directory, or a virtual host directory of your choice and follow the requirements below:
 
 
