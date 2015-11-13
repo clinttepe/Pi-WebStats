@@ -43,7 +43,8 @@ echo "<VirtualHost *:80>
                 Order allow,deny
                 allow from all
         </Directory>
-</VirtualHost>" >> /etc/apache2/sites-available/default
+</VirtualHost>" > /etc/apache2/sites-available/000-default.conf
+apache2ctl graceful
 #
 echo "
 Configuring sudoers to support shutdown functionality... step 5/5
