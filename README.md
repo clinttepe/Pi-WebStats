@@ -2,14 +2,12 @@
 Displays general system and GPIO information for the Raspberry Pi in a simple web interface.
 
 Screenshot: http://imgur.com/HqEttvo
-
-Installation:
   
-  **WARNING: Always review code before running it on your system; particularly when it requests sudo/root priviliges!!**
+  **Always review code before running it on your system; particularly when it requests sudo/root priviliges!!**
   
- **Simple Installation:** To download Pi-WebStats and completely install it will all dependencies, simply run 
+**Simple Installation:** To download Pi-WebStats and completely install it will all dependencies, simply install git and run 
   
-  <code>wget https://raw.githubusercontent.com/NexEng/Pi-WebStats/master/install-and-download.sh && sudo bash install-and-download.sh</code>
+  <code>git clone https://raw.githubusercontent.com/NexEng/Pi-WebStats && sudo bash Pi-WebStats/install.sh</code>
   
  
   If you want to set up the webserver on your own, simply download Pi-WebStats and put it in your default web server directory, or a virtual host directory of your choice and follow the requirements below:
