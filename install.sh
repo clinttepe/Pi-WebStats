@@ -33,6 +33,6 @@ echo "www-data `hostname` = (root) NOPASSWD: /sbin/shutdown" >>/etc/sudoers
 #
 echo "
 
-Pi-Webstats Ready! Navigate to http://`hostname -i | xargs`/Pi-WebStats-master/ in your browser.
--Alternatively, http://`hostname`.local/Pi-WebStats-master/ can be used if your Pi is on your local network.
+Pi-Webstats Ready! Navigate to http://`hostname -i | xargs`/Pi-WebStats/ in your browser.
+-Alternatively, http://`hostname`.local/Pi-WebStats/ can be used if your Pi is on your local network.
 "
